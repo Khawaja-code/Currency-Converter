@@ -19,7 +19,7 @@ This is my mini web development project – a **basic Currency Converter Web App
 - **CSS3**
 - **JavaScript (Vanilla JS)**
 
----
 
-s
+
+
 
