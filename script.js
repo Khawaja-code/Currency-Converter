@@ -1,5 +1,5 @@
 BaseURL = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/`
-secUrl=`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json`
+secUrl = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json`
 let container = document.querySelectorAll(".dropdown select")
 let from = document.querySelector(".from select")
 let to = document.querySelector(".to select")
@@ -13,11 +13,11 @@ for (const select of container) {
         select.append(opt)
         if (select.name === "from" && opt.value === "USD") {
             opt.selected = "selected"
-            select.parentElement.querySelector("p").innerText="US Dollar"
+            select.parentElement.querySelector("p").innerText = "US Dollar"
         }
         else if (select.name === "to" && opt.value === "PKR") {
             opt.selected = "selected"
-            select.parentElement.querySelector("p").innerText="pakistani Rupee"
+            select.parentElement.querySelector("p").innerText = "pakistani Rupee"
 
         }
     }
@@ -40,12 +40,12 @@ const getRate = async () => {
     let result = inpfield.value * rate
     msg.innerText = `${inpfield.value} ${from.value} = ${result.toFixed(3)} ${to.value}`
 }
-const updateflag =async (element) => {
-     let response=await fetch(secUrl)
-    let data=await response.json()
-    let fact=data[element.value.toLowerCase()]
-    let namecount=element.nextElementSibling
-    namecount.innerText=fact
+const updateflag = async (element) => {
+    let response = await fetch(secUrl)
+    let data = await response.json()
+    let fact = data[element.value.toLowerCase()]
+    let namecount = element.nextElementSibling
+    namecount.innerText = fact
     let curval = countryList[element.value]
     let img = element.previousElementSibling
     img.src = `https://flagsapi.com/${curval}/flat/64.png`
