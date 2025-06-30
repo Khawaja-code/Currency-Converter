@@ -21,7 +21,5 @@ This is my mini web development project – a **basic Currency Converter Web App
 
 ---
 
-## 📸 Screenshots:
-
-*(You can add screenshots of your app here later, using:)*
+s
 
